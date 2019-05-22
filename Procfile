@@ -1,1 +1,1 @@
-web: python FlaskHome.py -p 5000
+web: python FlaskHome.py
