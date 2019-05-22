@@ -1,1 +1,1 @@
-web: python FlaskHome.py
+worker: python FlaskHome.py
