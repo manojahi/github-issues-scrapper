@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+        <form method="POST" id="target"> 
+            <br/>
+            <h3>Github Issue Tracker</h3>
+            <br/>
+            <div class="form-group">
+                <input type="text" class="form-control" name="link" placeholder="Github Repo Link">
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Find Issues</button>
+        </form>
+
+        <br />
+        <h5><a href="{{ url }}" target="_blank">{{ url }}</a></h5>
+        <br/>
+
+        <div class="table-responsive">
+            <table class="table" id="flights">
+                <thead>
+                    <tr>
+                        <th scope="col">Total Issues</th>
+                        <th scope="col">In Last 24 hours</th>
+                        <th scope="col">Between 24 hours and 7 days</th>
+                        <th scope="col">More than 7 days</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="issues">
+                        <th scope="row">{{ total_issues }}</th>
+                        <td> {{ last_24_hours }} </td>
+                        <td> {{ in_24_and_7 }} </td>
+                        <td> {{ more_than_7 }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    {% endblock %}
