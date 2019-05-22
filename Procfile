@@ -1,1 +1,1 @@
-web: python FlaskHome.py $PORT
+web: python FlaskHome.py -p $PORT
